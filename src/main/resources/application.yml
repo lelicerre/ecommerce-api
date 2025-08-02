@@ -1,0 +1,33 @@
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /docs
+    enabled: true
+logging:
+  level:
+    org:
+      springdoc: DEBUG
+      springframework:
+        web: DEBUG
+spring:
+  sql:
+    init:
+      schema-locations: classpath:sql/setup.sql
+      data-locations: classpath:sql/inserts.sql
+  application:
+    name: ecommerce-api
+  datasource:
+    url: jdbc:h2:mem:testdb  # ou jdbc:h2:file:./data/testdb para persist?ncia em disco
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console  # URL de acesso ao console (opcional)
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update  # ou create, create-drop, validate, none
+    show-sql: true  # mostra queries no console

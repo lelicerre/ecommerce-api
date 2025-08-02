@@ -1,0 +1,1 @@
+create table IF NOT EXISTS department (codigo varchar(255) not null, descricao varchar(255), primary key (codigo))

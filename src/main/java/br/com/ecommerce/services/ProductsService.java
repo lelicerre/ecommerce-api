@@ -24,7 +24,9 @@ public class ProductsService {
     }
 
     public Product saveProduct(ProductRequestDTO productRequestDTO) {
-        return productRepository.save(productMapper.toEntity(productRequestDTO));
+        Product product = productMapper.toEntity(productRequestDTO);
+        product.setStatus(true);
+        return productRepository.save(product);
     }
 
     public Product updateProduct(Long id, ProductRequestDTO productRequestDTO) {

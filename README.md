@@ -66,7 +66,3 @@ Documentação automática disponível em:
 \`\`\`
 http://localhost:8080/swagger-ui/index.html
 \`\`\`
-
-## Diagrama
-
-![img.png](img.png)
